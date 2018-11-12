@@ -29,8 +29,6 @@
                     </el-table-column>
                     <el-table-column prop="name" label="商品名称">
                     </el-table-column>
-                    <el-table-column prop="category_name" label="所属分类">
-                    </el-table-column>
                     <el-table-column prop="retail_price" label="售价" width="120">
                     </el-table-column>
                     <el-table-column prop="goods_number" label="库存" width="120">
@@ -100,7 +98,7 @@
           type: 'warning'
         }).then(() => {
 
-          this.axios.post('goods/destory', { id: row.id }).then((response) => {
+          this.axios.post('商品/destory', { id: row.id }).then((response) => {
             console.log(response.data)
             if (response.data.errno === 0) {
               this.$message({
@@ -126,8 +124,8 @@
             name: this.filterForm.name
           }
         }).then((response) => {
-          this.tableData = response.data.data.content
-          this.page = response.data.data.number
+          this.tableData = response.data.data.data
+          this.page = response.data.data.currentPage
           this.total = response.data.data.count
         })
       }

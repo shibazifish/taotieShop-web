@@ -18,31 +18,18 @@
                     <i class="fa fa-circle"></i>
                     <span>商品列表</span>
                 </el-menu-item>
-                <el-menu-item index="/dashboard/goodsgallery">
-                    <i class="fa fa-circle"></i>
-                    <span>商品标头图列表</span>
-                </el-menu-item>
                 <el-menu-item index="/dashboard/category">
                     <i class="fa fa-circle"></i>
                     <span>商品分类</span>
-                </el-menu-item>
-                <el-menu-item index="/dashboard/channel">
-                    <i class="fa fa-circle"></i>
-                    <span>首页分类</span>
                 </el-menu-item>
                 <el-menu-item index="/dashboard/brand">
                     <i class="fa fa-circle"></i>
                     <span>品牌管理</span>
                 </el-menu-item>
-                <el-menu-item index="/dashboard/goodsissue">
-                    <i class="fa fa-circle"></i>
-                    <span>商品疑问</span>
-                </el-menu-item>
             </el-submenu>
             <el-submenu index="order">
                 <template slot="title">
-                    <i class="fa fa-large fa-truck"></i>
-                    <span>订单中心</span>
+                    <i class="fa fa-large fa-truck"></i>订单中心
                 </template>
                 <el-menu-item index="/dashboard/order">
                     <i class="fa fa-circle"></i>
@@ -71,28 +58,16 @@
                     <span>专题管理</span>
                 </el-menu-item>
             </el-submenu>
-            <el-submenu index="data">
-                <template slot="title">
-                    <i class="fa fa-large fa-line-chart"></i>
-                    <span>数据统计</span>
-                </template>
-                <el-menu-item index="/dashboard/shopcart">
-                    <i class="fa fa-circle"></i>
-                    <span>购物车列表</span>
-                </el-menu-item>
-                <el-menu-item index="/dashboard/comment">
-                    <i class="fa fa-circle"></i>
-                    <span>评论列表</span>
-                </el-menu-item>
-                <el-menu-item index="/dashboard/coupon">
-                    <i class="fa fa-circle"></i>
-                    <span>优惠券列表</span>
-                </el-menu-item>
-                <el-menu-item index="/dashboard/keywords">
-                    <i class="fa fa-circle"></i>
-                    <span>热门搜索</span>
-                </el-menu-item>
-            </el-submenu>
+            <!--<el-submenu index="total">-->
+                <!--<template slot="title">-->
+                    <!--<i class="fa fa-large fa-line-chart"></i>-->
+                    <!--<span>数据统计</span>-->
+                <!--</template>-->
+                <!--<el-menu-item index="/dashboard/total">-->
+                    <!--<i class="fa fa-circle"></i>-->
+                    <!--<span>订单列表</span>-->
+                <!--</el-menu-item>-->
+            <!--</el-submenu>-->
             <el-submenu index="user">
                 <template slot="title">
                     <i class="fa fa-large fa-users"></i>
@@ -121,26 +96,6 @@
                     <!--<span>首页设置</span>-->
                 <!--</el-menu-item>-->
             <!--</el-submenu>-->
-            <el-submenu index="shipper">
-                <template slot="title">
-                    <i class="fa fa-large fa-users"></i>
-                    <span>快递公司</span>
-                </template>
-                <el-menu-item index="/dashboard/shipper">
-                    <i class="fa fa-circle"></i>
-                    <span>快递公司列表</span>
-                </el-menu-item>
-            </el-submenu>
-            <el-submenu index="ad">
-                <template slot="title">
-                    <i class="fa fa-large fa-picture-o"></i>
-                    <span>广告管理</span>
-                </template>
-                <el-menu-item index="/dashboard/ad">
-                    <i class="fa fa-circle"></i>
-                    <span>广告列表</span>
-                </el-menu-item>
-            </el-submenu>
         </el-menu>
     </div>
 </template>
