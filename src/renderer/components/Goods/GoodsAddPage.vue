@@ -32,7 +32,7 @@
           </el-form-item>
           <el-form-item label="商品图片" prop="list_pic_url">
             <el-upload class="image-uploader" name="brand_pic"
-                       action="http://127.0.0.1:8360/admin/upload/brandPic" :show-file-list="true"
+                       action="http://127.0.0.1:8082/admin/upload/brandPic" :show-file-list="true"
                        :on-success="handleUploadImageSuccess" :headers="uploaderHeader">
               <img v-if="infoForm.list_pic_url" :src="infoForm.list_pic_url" class="image-show">
               <i v-else class="el-icon-plus image-uploader-icon"></i>
@@ -106,7 +106,7 @@
       onSubmitInfo() {
         this.$refs['infoForm'].validate((valid) => {
           if (valid) {
-            this.axios.post('brand/store', this.infoForm).then((response) => {
+            this.axios.post('goods/store', this.infoForm).then((response) => {
               if (response.data.errno === 0) {
                 this.$message({
                   type: 'success',
@@ -130,10 +130,10 @@
           switch (res.data.name) {
             //商品图片
             case 'brand_pic':
-              this.$set('infoForm.list_pic_url', res.data.fileUrl);
+                infoForm.list_pic_url = res.data.fileUrl;
               break;
             case 'brand_new_pic':
-              this.$set('infoForm.new_pic_url', res.data.fileUrl);
+                infoForm.new_pic_url = res.data.fileUrl;
               break;
           }
         }
